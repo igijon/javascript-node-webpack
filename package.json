@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --config webpack.config.js --open --port=8080"
   },
   "author": "Inma Gijón",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "html-loader": "^4.1.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.0"
   }
 }
