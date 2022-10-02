@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"saludar\": () => (/* binding */ saludar)\n/* harmony export */ });\n/* harmony import */ var _css_components_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/components.css */ \"./src/css/components.css\");\n\n\n\nconst saludar = ( nombre ) => {\n    console.log('Creando etiqueta h1');\n    const h1 = document.createElement('h1');\n    h1.innerText = `Hola, ${nombre}!!!!`;\n    document.body.append(h1);\n} \n\n//# sourceURL=webpack://03-webpack-inicial/./src/js/componentes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"saludar\": () => (/* binding */ saludar)\n/* harmony export */ });\n/* harmony import */ var _css_components_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/components.css */ \"./src/css/components.css\");\n\n\n// import webpacklogo from '../assets/img/webpack-logo.png'\n\nconst saludar = ( nombre ) => {\n    console.log('Creando etiqueta h1');\n    const h1 = document.createElement('h1');\n    h1.innerText = `Hola, ${nombre}!!!!`;\n    document.body.append(h1);\n\n    // Img\n    // const img = document.createElement('img');\n    // img.src = webpacklogo;\n    // document.body.append( img );\n} \n\n//# sourceURL=webpack://03-webpack-inicial/./src/js/componentes.js?");
 
 /***/ })
 
