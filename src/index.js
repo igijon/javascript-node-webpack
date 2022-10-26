@@ -1,5 +1,5 @@
 import { saludar } from './js/componentes';
-import './styles.css';
+import './styles.scss';
 
 const nombre = 'Inma';
 
