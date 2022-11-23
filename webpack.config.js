@@ -1,9 +1,20 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const path = require('path');
+const filesHTML = ['index.html', 'html/prueba2.html']
 
 module.exports = {
     mode: 'development',
+    devServer: {
+        historyApiFallback: true,
+        allowedHosts: 'all',
+        static: {
+            directory: path.join(__dirname, '/')
+        },
+        hot: true,
+        open:true
+    },
     output: {
         clean: true
     },
@@ -41,19 +52,18 @@ module.exports = {
     },
     optimization: {},
     plugins: [
-        new HtmlWebPackPlugin({
-            title: 'Mi Webpack App',
-            //filename: 'index.html',
-            template: './src/index.html'
-        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             ignoreOrder: false
         }),
         new CopyPlugin({
             patterns: [
-                {from: 'src/assets/', to: 'assets/'}
+                {from: 'src/assets/', to: 'assets/'},
+                {from: 'src/html/*', to: 'html/[name].[ext]'}
             ]
         })
-    ]
+    ].concat(filesHTML.map((templateFileName) => new HtmlWebPackPlugin({
+        filename: templateFileName,
+        template: './src/'+templateFileName
+    })))
 };
