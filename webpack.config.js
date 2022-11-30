@@ -8,7 +8,7 @@ const filesHTML = [
         chunks: ['index']
     }, 
     {   filename: './html/prueba2.html',
-        chunks: ['prueba']
+        chunks: ['prueba', 'registro']
     }
 ]
 
@@ -60,7 +60,8 @@ module.exports = {
     },
     entry: {
         index: './src/index.js',
-        prueba: './src/js/probando.js'
+        prueba: './src/js/probando.js',
+        registro: './src/js/registro.js'
     },
     optimization: {},
     plugins: [
